@@ -18,7 +18,7 @@ const corsOptions = {
     allowedHeaders: ['Content-Type', 'Authorization'],
 };
 app.use(cors(corsOptions));
-pp.options('*', cors(corsOptions));
+app.options('*', cors(corsOptions));
 // Enable CORS for all origins or specify certain origins
 app.use(cors());
 
