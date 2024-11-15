@@ -11,8 +11,19 @@ connectDB();
 const app = express();
 app.use(express.json());
 
+
+const corsOptions = {
+    origin: 'https://your-frontend-domain.com', // replace with your frontend URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+};
+app.use(cors(corsOptions));
+pp.options('*', cors(corsOptions));
 // Enable CORS for all origins or specify certain origins
 app.use(cors());
+
+
+
 
 // // If you want to restrict CORS to specific origin(s)
 // app.use(cors({
