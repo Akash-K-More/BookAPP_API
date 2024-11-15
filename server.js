@@ -13,7 +13,7 @@ app.use(express.json());
 
 
 const corsOptions = {
-    origin: 'https://your-frontend-domain.com', // replace with your frontend URL
+    origin: ['http://localhost:3000', 'https://your-production-frontend-domain.com'], // replace with your frontend URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
 };
